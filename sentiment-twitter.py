@@ -12,9 +12,11 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.search('Trump')
+user_input = input('Enter the topic you would like to analyze: ')
+
+public_tweets = api.search(str(user_input))
 
 for tweet in public_tweets:
 	print (tweet.text)
 	analysis = TextBlob(tweet.text)
-	print(analysis.sentiment)
+	print(analysis.sentiment,'\n')
