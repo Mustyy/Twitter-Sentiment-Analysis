@@ -2,6 +2,12 @@ import tweepy
 from textblob import TextBlob
 import config
 
+# Place your OWN (Consumer Key, Consumer Secret, Access Token, Access Secret Token)
+# inside auth & auth.set_access_token.
+
+# You can obtain them from:
+# https://apps.twitter.com/
+
 auth = tweepy.OAuthHandler(config.consumer_key, config.consumer_secret)
 auth.set_access_token(config.access_token, config.access_token_secret)
 
