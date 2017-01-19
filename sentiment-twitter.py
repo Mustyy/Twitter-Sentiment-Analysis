@@ -20,6 +20,7 @@ try:
 	public_tweets = api.search(str(user_input))
 
 	for tweet in public_tweets:
+		print ('*' * 60)
 		print (tweet.text)
 		analysis = TextBlob(tweet.text)
 		print(analysis.sentiment,'\n')
